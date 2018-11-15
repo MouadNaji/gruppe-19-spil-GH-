@@ -32,9 +32,13 @@ function startGame() {
 
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#billede1").addEventListener("click", tjek);
+    document.querySelector("#billede1").addEventListener("animationend", gameOver2);
     document.querySelector("#billede2").addEventListener("click", tjek);
+    document.querySelector("#billede2").addEventListener("animationend", gameOver2);
     document.querySelector("#billede3").addEventListener("click", tjek);
+    document.querySelector("#billede3").addEventListener("animationend", gameOver2);
     document.querySelector("#billede4").addEventListener("click", tjek);
+    document.querySelector("#billede4").addEventListener("animationend", gameOver2);
     document.querySelector("#billede5").addEventListener("click", gameOver1);
     document.querySelector("#billede5").addEventListener("animationend", tjek);
     document.querySelector("#billede6").addEventListener("click", gameOver1);
@@ -72,8 +76,24 @@ function billedeAnimation() {
     document.querySelector("#billede" + billedeNr).classList.remove("hide");
     document.querySelector("#billede" + billedeNr).classList.add("swoop");
 
-
+    //    function nytNr() {
+    //        billedeNr = Math.floor((Math.random() * 7) + 1);
+    //        console.log(billedeNrOld);
+    //        if (billedeNr == billedeNrOld) {
+    //            nytNr();
+    //        }
+    //        billedeNrOld = billedeNr;
+    //
+    //    }
+    //    if (timeLeft == 0) {
+    //        levelComplete();
+    //    } else {
+    //        nytNr();
+    //        document.querySelector("#billede" + elementNr).classList = "show";
+    //        document.querySelector("#billede" + elementNr).addEventListener("animationend", tjek);
+    //    }
 }
+
 
 function startTime() {
     timeLeft--;
