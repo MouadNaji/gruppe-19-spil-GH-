@@ -62,7 +62,7 @@
 .show {
     visibility: visible;
 }
-
+/*****************Game skærme***************/
 #game_background {
     position: relative;
     height: 56.25vw;
@@ -96,7 +96,8 @@
     background-size: 100%;
     background-image: url(SVG/level%20complete%20sk%C3%A6rm.svg);
 }
-
+/*****************Game skærme***************/
+/*****************Sluk knappen***************/
 #luk1 {
     background-image: url(SVG/kryds_knap.svg);
     position: relative;
@@ -152,7 +153,7 @@
     height: 5vw;
     left: 15vw;
 }
-
+/*****************Sluk knappen***************/
 .billed {
     position: absolute;
     background-color: antiquewhite;
