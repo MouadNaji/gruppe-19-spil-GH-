@@ -1,0 +1,51 @@
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+/*/pulse*/
+
+/*  Billedet kommer ind fra siden, og står stille lidt*/
+.swoop {
+    animation-name: swoop_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+@keyframes swoop_kf {
+    0% {
+        transform: translateX(-20vw)
+    }
+
+    25% {
+        transform: translateX(0vw)
+    }
+
+    75% {
+        transform: translateX(0vw)
+    }
+
+    100% {
+        transform: translateX(20vw)
+    }
+}
+
+/* Billede move */
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
