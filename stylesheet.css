@@ -1,3 +1,6 @@
+*{margin: 0;
+padding: 0;}
+
 .pulse {
     animation-name: pulse_kf;
     animation-duration: 1.7s;
@@ -48,4 +51,27 @@
 
 .blur {
     filter: blur(5px) brightness(80%);
+}
+
+#game_background {
+    position: relative;
+    height: 56.25vw;
+    background-size: 100%;
+    background-image: url(SVG/spilsk%C3%A6rm%20.svg);
+}
+#gameover1 {
+    position: absolute;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    background-size: 100%;
+    background-image: url(SVG/game%20over%201.svg);
+}
+#gameover2{
+    position: absolute;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    background-size: 100%;
+    background-image: url(SVG/game%20over%202.svg);
 }
