@@ -52,7 +52,10 @@ padding: 0;}
 .blur {
     filter: blur(5px) brightness(80%);
 }
-
+.hide{
+    display: none;
+}
+.show{visibility: visible;}
 #game_background {
     position: relative;
     height: 56.25vw;
@@ -74,4 +77,12 @@ padding: 0;}
     top: 0;
     background-size: 100%;
     background-image: url(SVG/game%20over%202.svg);
+}
+#levelcomplete{
+    position: absolute;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    background-size: 100%;
+    background-image: url(SVG/level%20complete%20sk%C3%A6rm.svg);
 }
