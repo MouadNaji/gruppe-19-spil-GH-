@@ -107,26 +107,50 @@
 
 #luk2 {
     background-image: url(SVG/kryds_knap.svg);
+        position: relative;
+    width: 5vw;
+    height: 5vw;
+    left: 15vw;
 }
 
 #luk3 {
     background-image: url(SVG/kryds_knap.svg);
+        position: relative;
+    width: 5vw;
+    height: 5vw;
+    left: 15vw;
 }
 
 #luk4 {
     background-image: url(SVG/kryds_knap.svg);
+        position: relative;
+    width: 5vw;
+    height: 5vw;
+    left: 15vw;
 }
 
 #luk5 {
     background-image: url(SVG/kryds_knap.svg);
+        position: relative;
+    width: 5vw;
+    height: 5vw;
+    left: 15vw;
 }
 
 #luk6 {
     background-image: url(SVG/kryds_knap.svg);
+        position: relative;
+    width: 5vw;
+    height: 5vw;
+    left: 15vw;
 }
 
 #luk7 {
     background-image: url(SVG/kryds_knap.svg);
+        position: relative;
+    width: 5vw;
+    height: 5vw;
+    left: 15vw;
 }
 
 .billed {
