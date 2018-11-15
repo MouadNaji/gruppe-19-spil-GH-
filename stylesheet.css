@@ -1,5 +1,7 @@
-*{margin: 0;
-padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .pulse {
     animation-name: pulse_kf;
@@ -20,6 +22,33 @@ padding: 0;}
 }
 
 /*/pulse*/
+
+.hide-start {
+    animation-name: menu_just_do_it;
+    animation-duration: 2s;
+    animation-iteration-count 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes hide-start {
+    0% {
+        transform: rotatey(0deg);
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotatey(360deg);
+        opacity: 0;
+
+    }
+}
 
 /*  Billedet kommer ind fra siden, og står stille lidt*/
 .swoop {
@@ -59,6 +88,7 @@ padding: 0;}
     background-size: 100%;
     background-image: url(SVG/spilsk%C3%A6rm%20.svg);
 }
+
 #gameover1 {
     position: absolute;
     height: 56.25vw;
@@ -67,7 +97,8 @@ padding: 0;}
     background-size: 100%;
     background-image: url(SVG/game%20over%201.svg);
 }
-#gameover2{
+
+#gameover2 {
     position: absolute;
     height: 56.25vw;
     width: 100vw;
