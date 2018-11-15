@@ -1,11 +1,12 @@
 window.addEventListener("load", sidenVises);
-let timeLeft = 300;
-
+let timeLeft = 20;
+let billedeNrOld = NaN;
+let billedNr = NaN;
 
 function sidenVises() {
     console.log("sidenVises");
     //nulstil alting
-
+    document.querySelector("#game_background").classList.remove("blur");
     showStart();
 }
 
@@ -29,7 +30,8 @@ document.querySelector("#start").addEventListener("animationend", startGame);
 
 function startGame() {
     console.log("startGame");
-
+    //    document.querySelector("#gameOver1").classList.add("hide");
+    //    document.querySelector("#gameOver2").classList.add("hide");
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#billede1").addEventListener("click", tjek);
     document.querySelector("#billede1").addEventListener("animationend", gameOver2);
@@ -45,11 +47,11 @@ function startGame() {
     document.querySelector("#billede6").addEventListener("animationend", tjek);
     document.querySelector("#billede7").addEventListener("click", gameOver1);
     document.querySelector("#billede7").addEventListener("animationend", tjek);
-    startTime();
+    //    startTime();
     tjek();
 
 }
-
+//  fjerner animation og synlighed
 function tjek() {
     document.querySelector("#billede1").classList.remove("swoop");
     document.querySelector("#billede2").classList.remove("swoop");
@@ -68,48 +70,51 @@ function tjek() {
     billedeAnimation();
 }
 
-
+// --------------laver et nyt billede
 function billedeAnimation() {
     console.log("billedeAnimation")
     billedeNr = Math.floor((Math.random() * 7) + 1);
-    console.log(billedeNr)
+    console.log(billedeNr);
     document.querySelector("#billede" + billedeNr).classList.remove("hide");
-    document.querySelector("#billede" + billedeNr).classList.add("swoop");
+    document.querySelector("#billede" + billedeNr).classList.add("swoop"); {
+        billedNrOld = billedNr;
+        console.log(billedeNr);
+    }
+    if (billedeNr == billedeNrOld) {
+        nytNr();
 
-    //    function nytNr() {
-    //        billedeNr = Math.floor((Math.random() * 7) + 1);
-    //        console.log(billedeNrOld);
-    //        if (billedeNr == billedeNrOld) {
-    //            nytNr();
-    //        }
-    //        billedeNrOld = billedeNr;
-    //
-    //    }
-    //    if (timeLeft == 0) {
-    //        levelComplete();
-    //    } else {
-    //        nytNr();
-    //        document.querySelector("#billede" + elementNr).classList = "show";
-    //        document.querySelector("#billede" + elementNr).addEventListener("animationend", tjek);
-    //    }
-}
-
-
-function startTime() {
-    timeLeft--;
-    console.log(timeLeft);
-
-    if (timeLeft > 0) {
-
-        gameTimeOut = setTimeout(startTime, 1000);
-
-
-    } else {
-        gameOver2();
     }
 
-    document.querySelector("#tid").textContent = timeLeft;
+
+
+    function nytNr() {
+        console.log("lort");
+        billedeNr = Math.floor((Math.random() * 7) + 1);
+        console.log("old" + billedeNrOld);
+
+
+
+    }
+
 }
+
+//-------Timer-------
+
+//function startTime() {
+//    timeLeft--;
+//    console.log(timeLeft);
+//
+//    if (timeLeft > 0) {
+//
+//        gameTimeOut = setTimeout(startTime, 1000);
+//
+//
+//    } else {
+//        levelComplete();
+//    }
+//
+//    document.querySelector("#tid").textContent = timeLeft;
+//}
 
 function hitBottom() {
 
@@ -119,11 +124,22 @@ function hitBottom() {
 }
 
 function gameOver1() {
+    console.log("gameOver1");
     document.querySelector("#gameover1").classList.remove("hide");
+    document.querySelector("#game_background").classList.add("blur");
 }
 
 function gameOver2() {
+    console.log("gameOver2");
     document.querySelector("#gameover2").classList.remove("hide");
+    document.querySelector("#game_background").classList.add("blur");
+
+}
+
+function levelComplete() {
+    console.log("levelComplete");
+    document.querySelector("#levelcomplete").classList.remove("hide");
+
 }
 
 //function nytBillede() {

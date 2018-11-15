@@ -17,7 +17,7 @@
     }
 
     100% {
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
 }
 
@@ -51,21 +51,21 @@
 /*  Billedet kommer ind fra siden, og står stille lidt*/
 .swoop {
     animation-name: swoop_kf;
-    animation-duration: 4s;
+    animation-duration: 1.9s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
 }
 
 @keyframes swoop_kf {
     0% {
-        transform: translateX(-20vw)
+        transform: translateX(-22vw)
     }
 
     25% {
         transform: translateX(0vw)
     }
 
-    75% {
+    90% {
         transform: translateX(0vw)
     }
 
@@ -220,30 +220,37 @@
 }
 
 #billede1 {
-    background-image: url(SVG/Bryster.svg)
+    background-image: url(SVG/Bryster.svg);
+    cursor: grab;
 }
 
 #billede2 {
-    background-image: url(SVG/Lumse.svg)
+    background-image: url(SVG/Lumse.svg);
+    cursor: grab;
 }
 
 #billede3 {
-    background-image: url(SVG/Tissekone.svg)
+    background-image: url(SVG/Tissekone.svg);
+    cursor: grab;
 }
 
 #billede4 {
-    background-image: url(SVG/Tissemann.svg)
+    background-image: url(SVG/Tissemann.svg);
+    cursor: grab;
 }
 
 #billede5 {
-    background-image: url(SVG/Kaffe.svg)
+    background-image: url(SVG/Kaffe.svg);
+    cursor: grab;
 }
 
 #billede6 {
-    background-image: url(SVG/Kat.svg)
+    background-image: url(SVG/Kat.svg);
+    cursor: grab;
 }
 
 #billede7 {
-    background-image: url(SVG/Natur.svg)
+    background-image: url(SVG/Natur.svg);
+    cursor: grab;
 }
 }
