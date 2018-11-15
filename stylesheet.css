@@ -23,6 +23,33 @@
 
 /*/pulse*/
 
+.hide-start {
+    animation-name: menu_just_do_it;
+    animation-duration: 2s;
+    animation-iteration-count 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes hide-start {
+    0% {
+        transform: rotatey(0deg);
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotatey(360deg);
+        opacity: 0;
+
+    }
+}
+
 /*  Billedet kommer ind fra siden, og står stille lidt*/
 .swoop {
     animation-name: swoop_kf;
