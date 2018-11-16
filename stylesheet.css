@@ -134,7 +134,7 @@
 
 /*****************Game skærme***************/
 #start {
-    background-color: darkblue;
+    background-image: url(SVG/start_background.svg);
     position: absolute;
     height: 56.25vw;
     width: 100vw;
