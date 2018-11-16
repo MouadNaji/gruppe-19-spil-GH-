@@ -89,6 +89,7 @@
 .show {
     visibility: visible;
 }
+
 /*****************Game skærme***************/
 #game_background {
     position: relative;
@@ -123,6 +124,7 @@
     background-size: 100%;
     background-image: url(SVG/level%20complete%20sk%C3%A6rm.svg);
 }
+
 /*****************Game skærme***************/
 /*****************Sluk knappen***************/
 #luk1 {
@@ -135,7 +137,7 @@
 
 #luk2 {
     background-image: url(SVG/kryds_knap.svg);
-        position: relative;
+    position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
@@ -143,7 +145,7 @@
 
 #luk3 {
     background-image: url(SVG/kryds_knap.svg);
-        position: relative;
+    position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
@@ -151,7 +153,7 @@
 
 #luk4 {
     background-image: url(SVG/kryds_knap.svg);
-        position: relative;
+    position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
@@ -159,7 +161,7 @@
 
 #luk5 {
     background-image: url(SVG/kryds_knap.svg);
-        position: relative;
+    position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
@@ -167,7 +169,7 @@
 
 #luk6 {
     background-image: url(SVG/kryds_knap.svg);
-        position: relative;
+    position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
@@ -175,11 +177,12 @@
 
 #luk7 {
     background-image: url(SVG/kryds_knap.svg);
-        position: relative;
+    position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
 }
+
 /*****************Sluk knappen***************/
 .billed {
     position: absolute;
@@ -189,19 +192,47 @@
     width: 22vw;
     height: 32vw;
 }
-#game_elements{    position: absolute;
+
+#game_elements {
+    position: absolute;
     background-color: aqua;
     top: 8vw;
     left: 36vw;
     width: 22vw;
     height: 32vw;
-overflow: hidden;}
-#billed1{background-image: url(SVG/Bryster.svg)}
-#billed2{background-image: url(SVG/Lumse.svg)}
-#billed3{background-image: url(SVG/Tissekone.svg)}
-#billed4{background-image: url(SVG/Tissemann.svg)}
-#billed5{background-image: url(SVG/Kaffe.svg)}
-#billed6{background-image: url(SVG/Kat.svg)}
-#billed7{background-image: url(SVG/Natur.svg)}}
+    overflow: hidden;
+}
 
+#billed1 {
+    background-image: url(SVG/Bryster.svg)
+}
 
+#billed2 {
+    background-image: url(SVG/Lumse.svg)
+}
+
+#billed3 {
+    background-image: url(SVG/Tissekone.svg)
+}
+
+#billed4 {
+    background-image: url(SVG/Tissemann.svg)
+}
+
+#billed5 {
+    background-image: url(SVG/Kaffe.svg)
+}
+
+#billed6 {
+    background-image: url(SVG/Kat.svg)
+}
+
+#billed7 {
+    background-image: url(SVG/Natur.svg)
+}
+}
+
+#politi_thumbsup {
+    background-image: url(SVG/tommel_op_politi.svg);
+
+}
