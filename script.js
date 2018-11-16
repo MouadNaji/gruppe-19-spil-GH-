@@ -113,9 +113,6 @@ function startTime() {
 
 function hitBottom() {
 
-
-
-
 }
 
 function gameOver1() {
@@ -124,6 +121,7 @@ function gameOver1() {
 
 function gameOver2() {
     document.querySelector("#gameover2").classList.remove("hide");
+    sprite2();
 }
 
 //function nytBillede() {
@@ -159,3 +157,14 @@ function gameOver2() {
 //
 //
 //}
+function sprite1() {
+    console.log("sprtieanimation")
+    document.querySelector("#politi_thumbsup").classList.add("on_off");
+
+}
+
+function sprite2() {
+    console.log("sprtieanimation2")
+    document.querySelector("#surpoliti").classList.add("off_on");
+
+}

@@ -88,6 +88,50 @@
     visibility: visible;
 }
 
+/********************sprite animation********************/
+.on {
+    background-position: 0;
+}
+
+.off {
+    background-position: -400% 0;
+}
+
+
+.off_on {
+    animation-name: on_off_kf;
+    animation-direction: reverse;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+
+}
+
+.on_off {
+    animation-name: on_off_kf;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+}
+
+@keyframes on_off_kf {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+
+
+
+
+
+
 /*****************Game skærme***************/
 #start {
     background-color: darkblue;
@@ -212,7 +256,6 @@
 #game_elements {
     position: absolute;
     background-color: aqua;
-<<<<<<< HEAD
     top: 8vw;
     left: 36vw;
     width: 22vw;
@@ -247,17 +290,28 @@
 #billed7 {
     background-image: url(SVG/Natur.svg)
 }
-}
+
 
 #politi_thumbsup {
+    position: absolute;
     background-image: url(SVG/tommel_op_politi.svg);
+    background-size: 500% 100%;
+    top: 8vw;
+    left: 4vw;
+    width: 45vw;
+    height: 45vw;
+    display: inline-block;
+}
 
-=======
-    top: 8.5vw;
-    left: 35.8vw;
-    width: 21.6vw;
-    height: 30.9vw;
-    overflow: hidden;
+#surpoliti {
+    position: absolute;
+    background-image: url(SVG/h%C3%A5ndjern_politi.svg);
+    background-size: 500% 100%;
+    top: 8vw;
+    left: 4vw;
+    width: 45vw;
+    height: 45vw;
+    display: inline-block;
 }
 
 #billede1 {
@@ -286,6 +340,4 @@
 
 #billede7 {
     background-image: url(SVG/Natur.svg)
-}
->>>>>>> origin/master
 }
