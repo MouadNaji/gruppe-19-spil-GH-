@@ -253,4 +253,18 @@
     background-image: url(SVG/Natur.svg);
     cursor: grab;
 }
+
+#points {
+
+    position: fixed;
+    top: 0vw;
+    left: 2vw;
+    width: 20vw;
+    height: 20vw;
+}
+
+#points,
+p {
+    font-size: 20vw;
+    color: yellow;
 }
