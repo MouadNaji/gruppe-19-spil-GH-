@@ -21,16 +21,14 @@
     }
 }
 
-/*/pulse*/
-
+/*billede drejer og forsvinder*/
 .hide-start {
-    animation-name: menu_just_do_it;
+    animation-name: hide-start;
     animation-duration: 2s;
     animation-iteration-count 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
-
 
 @keyframes hide-start {
     0% {
@@ -72,7 +70,7 @@
     }
 
     100% {
-        transform: translateX(20vw)
+        transform: translateX(25vw)
     }
 }
 
@@ -91,6 +89,24 @@
 }
 
 /*****************Game skærme***************/
+#start {
+    background-color: darkblue;
+    position: absolute;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    background-size: 100%;
+}
+
+#playknap {
+    background-color: red;
+    position: absolute;
+    height: 15vw;
+    width: 20vw;
+    top: 20vw;
+    left: 40vw;
+}
+
 #game_background {
     position: relative;
     height: 56.25vw;
@@ -184,7 +200,7 @@
 }
 
 /*****************Sluk knappen***************/
-.billed {
+.billede {
     position: absolute;
     background-color: antiquewhite;
     top: 0vw;
@@ -196,6 +212,7 @@
 #game_elements {
     position: absolute;
     background-color: aqua;
+<<<<<<< HEAD
     top: 8vw;
     left: 36vw;
     width: 22vw;
@@ -235,4 +252,40 @@
 #politi_thumbsup {
     background-image: url(SVG/tommel_op_politi.svg);
 
+=======
+    top: 8.5vw;
+    left: 35.8vw;
+    width: 21.6vw;
+    height: 30.9vw;
+    overflow: hidden;
+}
+
+#billede1 {
+    background-image: url(SVG/Bryster.svg)
+}
+
+#billede2 {
+    background-image: url(SVG/Lumse.svg)
+}
+
+#billede3 {
+    background-image: url(SVG/Tissekone.svg)
+}
+
+#billede4 {
+    background-image: url(SVG/Tissemann.svg)
+}
+
+#billede5 {
+    background-image: url(SVG/Kaffe.svg)
+}
+
+#billede6 {
+    background-image: url(SVG/Kat.svg)
+}
+
+#billede7 {
+    background-image: url(SVG/Natur.svg)
+}
+>>>>>>> origin/master
 }
