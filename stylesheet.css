@@ -151,6 +151,15 @@
     left: 40vw;
 }
 
+#replayknap {
+    position: absolute;
+    background-image: url(SVG/replay_knap%20.svg);
+    height: 12vw;
+    width: 10vw;
+    top: 40vw;
+    left: 75vw;
+}
+
 #game_background {
     position: relative;
     height: 56.25vw;
