@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/*****************animationer**********************/
 .pulse {
     animation-name: pulse_kf;
     animation-duration: 1.7s;
@@ -126,6 +127,7 @@
     }
 }
 
+/*****************animationer slut***************/
 
 
 
@@ -253,6 +255,7 @@
 }
 
 /*****************Sluk knappen***************/
+/*****************Billederne***************/
 .billede {
     position: absolute;
     background-color: antiquewhite;

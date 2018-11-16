@@ -168,14 +168,3 @@ function sprite2() {
     document.querySelector("#surpoliti").classList.add("off_on");
 
 }
-
-function playAgain() {
-    console.log("click replay");
-    window.location.reload(true);
-
-}
-
-function replay() {
-    document.querySelector("#replayknap").addEventListener("click", playAgain);
-
-}
