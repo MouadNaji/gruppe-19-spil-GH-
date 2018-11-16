@@ -88,9 +88,53 @@
     visibility: visible;
 }
 
+/********************sprite animation********************/
+.on {
+    background-position: 0;
+}
+
+.off {
+    background-position: -400% 0;
+}
+
+
+.off_on {
+    animation-name: on_off_kf;
+    animation-direction: reverse;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+
+}
+
+.on_off {
+    animation-name: on_off_kf;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+}
+
+@keyframes on_off_kf {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+
+
+
+
+
+
 /*****************Game skærme***************/
 #start {
-    background-color: darkblue;
+    background-image: url(SVG/start_background.svg);
     position: absolute;
     height: 56.25vw;
     width: 100vw;
@@ -212,11 +256,62 @@
 #game_elements {
     position: absolute;
     background-color: aqua;
-    top: 8.5vw;
-    left: 35.8vw;
-    width: 21.6vw;
-    height: 30.9vw;
+    top: 8vw;
+    left: 36vw;
+    width: 22vw;
+    height: 32vw;
     overflow: hidden;
+}
+
+#billed1 {
+    background-image: url(SVG/Bryster.svg)
+}
+
+#billed2 {
+    background-image: url(SVG/Lumse.svg)
+}
+
+#billed3 {
+    background-image: url(SVG/Tissekone.svg)
+}
+
+#billed4 {
+    background-image: url(SVG/Tissemann.svg)
+}
+
+#billed5 {
+    background-image: url(SVG/Kaffe.svg)
+}
+
+#billed6 {
+    background-image: url(SVG/Kat.svg)
+}
+
+#billed7 {
+    background-image: url(SVG/Natur.svg)
+}
+
+
+#politi_thumbsup {
+    position: absolute;
+    background-image: url(SVG/tommel_op_politi.svg);
+    background-size: 500% 100%;
+    top: 8vw;
+    left: 4vw;
+    width: 45vw;
+    height: 45vw;
+    display: inline-block;
+}
+
+#surpoliti {
+    position: absolute;
+    background-image: url(SVG/h%C3%A5ndjern_politi.svg);
+    background-size: 500% 100%;
+    top: 8vw;
+    left: 4vw;
+    width: 45vw;
+    height: 45vw;
+    display: inline-block;
 }
 
 #billede1 {
@@ -253,6 +348,7 @@
     background-image: url(SVG/Natur.svg);
     cursor: grab;
 }
+<<<<<<< HEAD
 
 #points {
 
@@ -268,3 +364,5 @@ p {
     font-size: 20vw;
     color: yellow;
 }
+=======
+>>>>>>> gruppe-19-spil-GH/master

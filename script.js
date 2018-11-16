@@ -245,3 +245,14 @@ function levelComplete() {
 //
 //
 //}
+function sprite1() {
+    console.log("sprtieanimation")
+    document.querySelector("#politi_thumbsup").classList.add("on_off");
+
+}
+
+function sprite2() {
+    console.log("sprtieanimation2")
+    document.querySelector("#surpoliti").classList.add("off_on");
+
+}
