@@ -348,10 +348,8 @@
     background-image: url(SVG/Natur.svg);
     cursor: grab;
 }
-<<<<<<< HEAD
 
 #points {
-
     position: fixed;
     top: 0vw;
     left: 2vw;
@@ -364,5 +362,3 @@ p {
     font-size: 20vw;
     color: yellow;
 }
-=======
->>>>>>> gruppe-19-spil-GH/master
