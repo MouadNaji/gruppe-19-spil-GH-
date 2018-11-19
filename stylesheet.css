@@ -135,6 +135,15 @@
 
 
 /*****************Game skærme***************/
+#mission {
+    background-image: url(SVG/sms_bobel_screen.svg);
+    position: absolute;
+    height: 32vw;
+    width: 22vw;
+    top: 0;
+    background-size: 100%;
+}
+
 #start {
     background-image: url(SVG/start_background.svg);
     position: absolute;

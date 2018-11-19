@@ -3,6 +3,7 @@ let timeLeft = 20;
 let oldRando = 800;
 let randoArr = [1, 2, 3, 4, 5, 6, 7];
 let points = 0;
+let gameEnded = false;
 
 function sidenVises() {
     console.log("sidenVises");
@@ -29,6 +30,14 @@ function hideStart() {
     document.querySelector("#start").classList.add("hide-start");
 }
 document.querySelector("#start").addEventListener("animationend", startGame);
+
+function mission() {
+    console.log("mission");
+    document.querySelector("#mission").classList.remove("hide");
+    document.querySelector("#playknap").classList.remove("pulse");
+    document.querySelector("#start").classList.add("hide");
+    document.querySelector("#mission").addEventListener("click", startGame);
+}
 
 function startGame() {
     console.log("startGame");
@@ -196,6 +205,7 @@ function hitBottom() {
 }
 
 function gameOver1() {
+    gameEnded = true;
     console.log("gameOver1");
     document.querySelector("#gameover1").classList.remove("hide");
     document.querySelector("#game_background").classList.add("hide");
@@ -203,9 +213,11 @@ function gameOver1() {
     document.querySelector("#levelcomplete").classList.add("hide");
     document.querySelector("#politihm").classList.add("off_on");
     document.querySelector("#settingsknap").addEventListener("click", showSettings);
+    removeAnimationEndOnGameOver2();
 }
 
 function gameOver2() {
+    gameEnded = true;
     console.log("gameOver2");
     document.querySelector("#gameover2").classList.remove("hide");
     document.querySelector("#game_background").classList.add("hide");
@@ -219,9 +231,12 @@ function gameOver2() {
 
 function levelComplete() {
     console.log("levelComplete");
-    document.querySelector("#levelcomplete").classList.remove("hide");
-    document.querySelector("#politi_thumbsup").classList.add("on_off")
-    document.querySelector("#settingsknap").addEventListener("click", showSettings);
+    if (gameEnded == false) {
+        document.querySelector("#levelcomplete").classList.remove("hide");
+        document.querySelector("#politi_thumbsup").classList.add("on_off")
+        document.querySelector("#settingsknap").addEventListener("click", showSettings);
+        removeAnimationEndOnGameOver2();
+    }
 }
 
 function showSettings() {
@@ -279,4 +294,13 @@ function sprite2() {
     console.log("sprtieanimation2")
     document.querySelector("#surpoliti").classList.add("off_on");
 
+}
+
+function removeAnimationEndOnGameOver2() {
+
+    document.querySelector("#billede1").removeEventListener("animationend", gameOver2);
+
+    document.querySelector("#billede2").removeEventListener("animationend", gameOver2);
+    document.querySelector("#billede3").removeEventListener("animationend", gameOver2);
+    document.querySelector("#billede4").removeEventListener("animationend", gameOver2);
 }
