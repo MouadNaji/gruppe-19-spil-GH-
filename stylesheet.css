@@ -188,7 +188,7 @@
     position: relative;
     height: 56.25vw;
     background-size: 100%;
-    background-image: url(SVG/spilsk%C3%A6rm%20.svg);
+    background-image: url(SVG/game_background.svg);
 }
 
 #gameover1 {
