@@ -15,6 +15,7 @@ function showStart() {
     console.log("showStart");
     document.querySelector("#playknap").classList.add("pulse");
     document.querySelector("#start").classList.remove("hide");
+    document.querySelector("#settingsknapstart").addEventListener("click", showSettings);
 
 }
 //klik på start knap
@@ -48,6 +49,7 @@ function startGame() {
     document.querySelector("#billede6").addEventListener("animationend", tjek);
     document.querySelector("#billede7").addEventListener("click", gameOver1);
     document.querySelector("#billede7").addEventListener("animationend", tjek);
+    document.querySelector("#settingsknap").addEventListener("click", showSettings);
     startTime();
     tjek();
 
@@ -197,6 +199,7 @@ function gameOver1() {
     console.log("gameOver1");
     document.querySelector("#gameover1").classList.remove("hide");
     document.querySelector("#game_background").classList.add("blur");
+    document.querySelector("#settingsknap").addEventListener("click", showSettings);
 }
 
 function gameOver2() {
@@ -204,7 +207,8 @@ function gameOver2() {
     document.querySelector("#gameover2").classList.remove("hide");
     document.querySelector("#game_background").classList.add("blur");
 
-    document.querySelector("#surpoliti").classList.add("off_on")
+    document.querySelector("#surpoliti").classList.add("off_on");
+    document.querySelector("#settingsknap").addEventListener("click", showSettings);
 
 }
 
@@ -212,6 +216,19 @@ function levelComplete() {
     console.log("levelComplete");
     document.querySelector("#levelcomplete").classList.remove("hide");
     document.querySelector("#politi_thumbsup").classList.add("on_off")
+    document.querySelector("#settingsknap").addEventListener("click", showSettings);
+}
+
+function showSettings() {
+    console.log("show settings");
+    document.querySelector("#settings").classList.remove("hide");
+    document.querySelector("#luksettings").addEventListener("click", hideSettings);
+
+}
+
+function hideSettings() {
+    console.log("hide settings");
+    document.querySelector("#settings").classList.add("hide");
 }
 
 //function nytBillede() {

@@ -144,13 +144,15 @@
     background-size: 100%;
 }
 
+
 #playknap {
-    background-color: red;
-    position: absolute;
+    background-image: url(SVG/play_knap.svg);
+    position: relative;
     height: 15vw;
-    width: 20vw;
-    top: 20vw;
-    left: 40vw;
+    width: 30vw;
+    top: 25vw;
+    left: 32vw;
+    background-size: 100%;
 }
 
 #replayknap {
@@ -160,6 +162,26 @@
     width: 10vw;
     top: 40vw;
     left: 75vw;
+}
+
+#settingsknapstart {
+    position: absolute;
+    background-image: url(SVG/setting_knap_start.svg);
+    height: 7vw;
+    width: 7vw;
+    top: 0vw;
+    left: 93vw;
+    background-size: 100%;
+}
+
+#settingsknap {
+    position: absolute;
+    background-image: url(SVG/setting_knap.svg);
+    height: 7vw;
+    width: 7vw;
+    top: 0vw;
+    left: 93vw;
+    background-size: 100%;
 }
 
 #game_background {
@@ -196,62 +218,88 @@
     background-image: url(SVG/level%20complete%20sk%C3%A6rm.svg);
 }
 
+#settings {
+    position: absolute;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    background-size: 100%;
+    background-image: url(SVG/setting_background.svg);
+}
+
 /*****************Game skærme***************/
 /*****************Sluk knappen***************/
 #luk1 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
 }
 
 #luk2 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
 }
 
 #luk3 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
 }
 
 #luk4 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
 }
 
 #luk5 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
 }
 
 #luk6 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
 }
 
 #luk7 {
-    background-image: url(SVG/kryds_knap.svg);
+    background-image: url(SVG/kryds_knap_mobil.svg);
     position: relative;
     width: 5vw;
     height: 5vw;
     left: 15vw;
+    background-size: 100%;
+}
+
+#luksettings {
+    background-image: url(SVG/kryds_knap_mobil.svg);
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    left: 89vw;
+    top: 2vw;
+    background-size: 100%;
 }
 
 /*****************Sluk knappen***************/
@@ -261,8 +309,9 @@
     background-color: antiquewhite;
     top: 0vw;
     left: 0vw;
-    width: 22vw;
-    height: 32vw;
+    width: 23vw;
+    height: 33vw;
+    background-size: 100%;
 }
 
 #game_elements {
