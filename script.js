@@ -204,12 +204,14 @@ function gameOver2() {
     document.querySelector("#gameover2").classList.remove("hide");
     document.querySelector("#game_background").classList.add("blur");
 
+    document.querySelector("#surpoliti").classList.add("off_on")
+
 }
 
 function levelComplete() {
     console.log("levelComplete");
     document.querySelector("#levelcomplete").classList.remove("hide");
-
+    document.querySelector("#politi_thumbsup").classList.add("on_off")
 }
 
 //function nytBillede() {
