@@ -220,7 +220,7 @@
 
 #settings {
     position: absolute;
-    height: 56.25vw;
+    height: 54.25vw;
     width: 100vw;
     top: 0;
     background-size: 100%;
@@ -367,6 +367,17 @@
 #surpoliti {
     position: absolute;
     background-image: url(SVG/h%C3%A5ndjern_politi.svg);
+    background-size: 500% 100%;
+    top: 8vw;
+    left: 4vw;
+    width: 45vw;
+    height: 45vw;
+    display: inline-block;
+}
+
+#politihm {
+    position: absolute;
+    background-image: url(SVG/skuldre_politi.svg);
     background-size: 500% 100%;
     top: 8vw;
     left: 4vw;

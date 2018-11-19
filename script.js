@@ -198,14 +198,19 @@ function hitBottom() {
 function gameOver1() {
     console.log("gameOver1");
     document.querySelector("#gameover1").classList.remove("hide");
-    document.querySelector("#game_background").classList.add("blur");
+    document.querySelector("#game_background").classList.add("hide");
+    document.querySelector("#gameover2").classList.add("hide");
+    document.querySelector("#levelcomplete").classList.add("hide");
+    document.querySelector("#politihm").classList.add("off_on");
     document.querySelector("#settingsknap").addEventListener("click", showSettings);
 }
 
 function gameOver2() {
     console.log("gameOver2");
     document.querySelector("#gameover2").classList.remove("hide");
-    document.querySelector("#game_background").classList.add("blur");
+    document.querySelector("#game_background").classList.add("hide");
+    document.querySelector("#gameover1").classList.add("hide");
+    document.querySelector("#levelcomplete").classList.add("hide");
 
     document.querySelector("#surpoliti").classList.add("off_on");
     document.querySelector("#settingsknap").addEventListener("click", showSettings);
