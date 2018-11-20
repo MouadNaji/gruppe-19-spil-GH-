@@ -167,7 +167,7 @@
 #playknap {
     background-image: url(SVG/play_knap.svg);
     position: relative;
-    height: 15vw;
+    height: 16vw;
     width: 30vw;
     top: 25vw;
     left: 32vw;
@@ -221,15 +221,6 @@
     background-size: 100%;
 }
 
-#settingsknap {
-    position: absolute;
-    background-image: url(SVG/setting_knap.svg);
-    height: 7vw;
-    width: 7vw;
-    top: 0vw;
-    left: 93vw;
-    background-size: 100%;
-}
 
 #game_background {
     position: relative;

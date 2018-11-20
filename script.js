@@ -59,7 +59,6 @@ function startGame() {
     document.querySelector("#billede6").addEventListener("animationend", tjek);
     document.querySelector("#billede7").addEventListener("click", gameOver1);
     document.querySelector("#billede7").addEventListener("animationend", tjek);
-    document.querySelector("#settingsknap").addEventListener("click", showSettings);
     startTime();
     tjek();
 
@@ -218,8 +217,6 @@ function gameOver1() {
     document.querySelector("#gameover2").classList.add("hide");
     document.querySelector("#levelcomplete").classList.add("hide");
     document.querySelector("#politihm").classList.add("off_on");
-    document.querySelector("#settingsknap").addEventListener("click", showSettings);
-     document.querySelector("#settingsknap").addEventListener("click", showSettings);
     document.querySelector("#replayknap1").addEventListener("click", replay);
     removeAnimationEndOnGameOver2();
 
@@ -234,7 +231,7 @@ function gameOver2() {
     document.querySelector("#levelcomplete").classList.add("hide");
     document.querySelector("#replayknap2").addEventListener("click", replay);
     document.querySelector("#surpoliti").classList.add("off_on");
-    document.querySelector("#settingsknap").addEventListener("click", showSettings);
+
 
 }
 
@@ -243,7 +240,6 @@ function levelComplete() {
     if (gameEnded == false) {
         document.querySelector("#levelcomplete").classList.remove("hide");
         document.querySelector("#politi_thumbsup").classList.add("on_off")
-        document.querySelector("#settingsknap").addEventListener("click", showSettings);
         document.querySelector("#replayknap3").addEventListener("click", replay);
         removeAnimationEndOnGameOver2();
 
