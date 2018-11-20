@@ -36,6 +36,7 @@ function mission() {
     document.querySelector("#mission").classList.remove("hide");
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#mission").addEventListener("click", startGame);
+    document.querySelector("#tjekknap").classList.add("pulse2");
 }
 
 function startGame() {
@@ -137,6 +138,11 @@ function random() {
 
 }
 
+function replay() {
+    console.log("click replay");
+    window.location.reload(false);
+}
+
 // --------------laver et nyt billede
 //function billedeAnimation() {
 //    console.log("billedeAnimation")
@@ -213,7 +219,10 @@ function gameOver1() {
     document.querySelector("#levelcomplete").classList.add("hide");
     document.querySelector("#politihm").classList.add("off_on");
     document.querySelector("#settingsknap").addEventListener("click", showSettings);
+     document.querySelector("#settingsknap").addEventListener("click", showSettings);
+    document.querySelector("#replayknap1").addEventListener("click", replay);
     removeAnimationEndOnGameOver2();
+
 }
 
 function gameOver2() {
@@ -223,7 +232,7 @@ function gameOver2() {
     document.querySelector("#game_background").classList.add("hide");
     document.querySelector("#gameover1").classList.add("hide");
     document.querySelector("#levelcomplete").classList.add("hide");
-
+    document.querySelector("#replayknap2").addEventListener("click", replay);
     document.querySelector("#surpoliti").classList.add("off_on");
     document.querySelector("#settingsknap").addEventListener("click", showSettings);
 
@@ -235,7 +244,9 @@ function levelComplete() {
         document.querySelector("#levelcomplete").classList.remove("hide");
         document.querySelector("#politi_thumbsup").classList.add("on_off")
         document.querySelector("#settingsknap").addEventListener("click", showSettings);
+        document.querySelector("#replayknap3").addEventListener("click", replay);
         removeAnimationEndOnGameOver2();
+
     }
 }
 

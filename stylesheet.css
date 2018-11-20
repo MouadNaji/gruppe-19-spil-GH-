@@ -12,6 +12,16 @@
     animation-timing-function: ease-in;
 }
 
+#link {}
+
+.pulse2 {
+    animation-name: pulse_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
 @keyframes pulse_kf {
     0% {
         transform: scale(0.97);
@@ -164,13 +174,41 @@
     background-size: 100%;
 }
 
-#replayknap {
+#replayknap1 {
     position: absolute;
     background-image: url(SVG/replay_knap%20.svg);
     height: 12vw;
     width: 10vw;
     top: 40vw;
     left: 75vw;
+}
+
+#replayknap2 {
+    position: absolute;
+    background-image: url(SVG/replay_knap%20.svg);
+    height: 12vw;
+    width: 10vw;
+    top: 40vw;
+    left: 75vw;
+}
+
+#replayknap3 {
+    position: absolute;
+    background-image: url(SVG/replay_knap%20.svg);
+    height: 12vw;
+    width: 10vw;
+    top: 40vw;
+    left: 75vw;
+}
+
+#tjekknap {
+    position: absolute;
+    background-image: url(SVG/tjek_knap.svg);
+    height: 6vw;
+    width: 7vw;
+    top: 18vw;
+    left: 12vw;
+    background-size: 100%;
 }
 
 #settingsknapstart {
@@ -436,6 +474,39 @@
     left: 2vw;
     width: 20vw;
     height: 20vw;
+}
+
+#link1 {
+    background-image: url(SVG/mere_info.svg);
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    top: 7vw;
+    left: 25vw;
+    background-size: 100%;
+    z-index: 2;
+}
+
+#link2 {
+    background-image: url(SVG/mere_info.svg);
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    top: 6vw;
+    left: 15vw;
+    background-size: 100%;
+    z-index: 2;
+}
+
+#link3 {
+    background-image: url(SVG/mere_info.svg);
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    top: 6vw;
+    left: 10vw;
+    background-size: 100%;
+    z-index: 2;
 }
 
 #points,
