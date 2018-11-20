@@ -5,6 +5,9 @@ let randoArr = [1, 2, 3, 4, 5, 6, 7];
 let points = 0;
 let gameEnded = false;
 
+let showSettingsEffektSound = true;
+let showSettingsMusic = true;
+
 function sidenVises() {
     console.log("sidenVises");
     //nulstil alting
@@ -37,10 +40,16 @@ function mission() {
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#mission").addEventListener("click", startGame);
     document.querySelector("#tjekknap").classList.add("pulse2");
+
+    document.querySelector("#melding").play();
 }
 
 function startGame() {
     console.log("startGame");
+
+    //start baggrundsmusik
+    document.querySelector("#background_music").play();
+
     //    document.querySelector("#gameOver1").classList.add("hide");
     //    document.querySelector("#gameOver2").classList.add("hide");
     document.querySelector("#mission").classList.add("hide");
@@ -61,6 +70,7 @@ function startGame() {
     document.querySelector("#billede7").addEventListener("animationend", tjek);
     startTime();
     tjek();
+
 
 }
 //  fjerner animation og synlighed
@@ -216,10 +226,11 @@ function gameOver1() {
     document.querySelector("#game_background").classList.add("hide");
     document.querySelector("#gameover2").classList.add("hide");
     document.querySelector("#levelcomplete").classList.add("hide");
-    document.querySelector("#politihm").classList.add("off_on");
+    document.querySelector("#politihm").classList.add("animation");
     document.querySelector("#replayknap1").addEventListener("click", replay);
     removeAnimationEndOnGameOver2();
-
+    document.querySelector("#gameover_audio").play();
+    document.querySelector("#replayknap1").classList.add("pulse2");
 }
 
 function gameOver2() {
@@ -230,8 +241,9 @@ function gameOver2() {
     document.querySelector("#gameover1").classList.add("hide");
     document.querySelector("#levelcomplete").classList.add("hide");
     document.querySelector("#replayknap2").addEventListener("click", replay);
-    document.querySelector("#surpoliti").classList.add("off_on");
-
+    document.querySelector("#surpoliti").classList.add("animation");
+    document.querySelector("#gameover_audio").play();
+    document.querySelector("#replayknap2").classList.add("pulse2");
 
 }
 
@@ -239,10 +251,11 @@ function levelComplete() {
     console.log("levelComplete");
     if (gameEnded == false) {
         document.querySelector("#levelcomplete").classList.remove("hide");
-        document.querySelector("#politi_thumbsup").classList.add("on_off")
+        document.querySelector("#politi_thumbsup").classList.add("animation")
         document.querySelector("#replayknap3").addEventListener("click", replay);
         removeAnimationEndOnGameOver2();
-
+        document.querySelector("#levelcomplete_audio").play();
+        document.querySelector("#replayknap3").classList.add("pulse2");
     }
 }
 
@@ -250,6 +263,9 @@ function showSettings() {
     console.log("show settings");
     document.querySelector("#settings").classList.remove("hide");
     document.querySelector("#luksettings").addEventListener("click", hideSettings);
+
+    document.querySelector("#setting_effect_sound").addEventListener("click", toggleSounds);
+    document.querySelector("#setting_music").addEventListener("click", toggleMusic);
 
 }
 
@@ -310,4 +326,103 @@ function removeAnimationEndOnGameOver2() {
     document.querySelector("#billede2").removeEventListener("animationend", gameOver2);
     document.querySelector("#billede3").removeEventListener("animationend", gameOver2);
     document.querySelector("#billede4").removeEventListener("animationend", gameOver2);
+}
+
+
+
+/*************musik og lyd****************/
+
+
+
+function toggleSounds() {
+    console.log("toggleSounds");
+
+    if (showSettingsEffektSound == false) {
+        //her klikker vi lyden på
+        showSettingsEffektSound = true;
+        document.querySelector("#lydeffekter_sprite").classList.add("off_on");
+        document.querySelector("#lydeffekter_sprite").classList.remove("off");
+        document.querySelector("#lydeffekter_sprite").addEventListener("animationend", soundsOn);
+        //        soundsOff();
+    } else {
+        //her kikker vi lyden af - slukker den
+        showSettingsEffektSound = false;
+        document.querySelector("#lydeffekter_sprite").classList.add("on_off");
+        document.querySelector("#lydeffekter_sprite").classList.remove("on");
+        document.querySelector("#lydeffekter_sprite").addEventListener("animationend", soundsOff);
+        //        soundsOn();
+    }
+
+}
+
+function soundsOff() {
+    console.log("soundsOff function værdi er " + showSettingsEffektSound);
+    document.querySelector("#lydeffekter_sprite").removeEventListener("animationend", soundsOff);
+    document.querySelector("#lydeffekter_sprite").classList.remove("on_off");
+    document.querySelector("#lydeffekter_sprite").classList.add("off");
+    //    her slukkes for efx
+    document.querySelector("#gameover_audio").muted = true;
+    document.querySelector("#levelcomplete_audio").muted = true;
+    document.querySelector("#sendtext_audio").muted = true;
+    document.querySelector("#melding").muted = true;
+}
+
+function soundsOn() {
+    console.log("soundsOn function værdi er " + showSettingsEffektSound);
+    document.querySelector("#lydeffekter_sprite").removeEventListener("animationend", soundsOn);
+    document.querySelector("#lydeffekter_sprite").classList.remove("off_on");
+    document.querySelector("#lydeffekter_sprite").classList.add("on");
+    //    her tændes for efx
+    document.querySelector("#gameover_audio").muted = false;
+    document.querySelector("#levelcomplete_audio").muted = false;
+    document.querySelector("#sendtext_audio").muted = false;
+    document.querySelector("#melding").muted = false;
+}
+
+
+function toggleMusic() {
+    console.log("togglemusic");
+
+    if (showSettingsMusic == false) {
+        //her klikker vi lyden på
+        showSettingsMusic = true;
+        document.querySelector("#music_sprite").classList.add("off_on");
+        document.querySelector("#music_sprite").classList.remove("off");
+        document.querySelector("#music_sprite").addEventListener("animationend", musicOn);
+        //        soundsOff();
+    } else {
+        //her kikker vi lyden af - slukker den
+        showSettingsMusic = false;
+        document.querySelector("#music_sprite").classList.add("on_off");
+        document.querySelector("#music_sprite").classList.remove("on");
+        document.querySelector("#music_sprite").addEventListener("animationend", musicOff);
+        //        soundsOn();
+    }
+
+}
+
+function musicOff() {
+    console.log("musicOff function værdi er " + showSettingsMusic);
+
+    document.querySelector("#music_sprite").removeEventListener("animationend", musicOff);
+    document.querySelector("#music_sprite").classList.remove("on_off");
+    document.querySelector("#music_sprite").classList.add("off");
+
+    //    her slukkes for muisk
+    document.querySelector("#background_music").pause();
+    document.querySelector("#background_music").muted = true;
+
+}
+
+function musicOn() {
+    console.log("musicOn function værdi er " + showSettingsMusic);
+
+    document.querySelector("#music_sprite").removeEventListener("animationend", musicOn);
+    document.querySelector("#music_sprite").classList.remove("off_on");
+    document.querySelector("#music_sprite").classList.add("on");
+
+    //    her tændes for musik
+    document.querySelector("#background_music").play();
+    document.querySelector("#background_music").muted = false;
+
 }
