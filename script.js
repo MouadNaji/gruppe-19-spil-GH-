@@ -29,12 +29,11 @@ function hideStart() {
     //forsvindings animation på start siden
     document.querySelector("#start").classList.add("hide-start");
 }
-document.querySelector("#start").addEventListener("animationend", startGame);
+document.querySelector("#start").addEventListener("animationend", mission);
 
 function mission() {
     console.log("mission");
     document.querySelector("#mission").classList.remove("hide");
-    document.querySelector("#playknap").classList.remove("pulse");
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#mission").addEventListener("click", startGame);
 }
@@ -43,6 +42,7 @@ function startGame() {
     console.log("startGame");
     //    document.querySelector("#gameOver1").classList.add("hide");
     //    document.querySelector("#gameOver2").classList.add("hide");
+    document.querySelector("#mission").classList.add("hide");
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#billede1").addEventListener("click", pointsTjek);
     document.querySelector("#billede1").addEventListener("animationend", gameOver2);
